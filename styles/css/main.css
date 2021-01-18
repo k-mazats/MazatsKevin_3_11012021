@@ -198,11 +198,12 @@ a {
 .search__validation {
   color: white;
   border: none;
+  outline: none;
   height: 50px;
-  width: 220px;
   font-size: 1rem;
   border-radius: 25px;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 95%);
+  width: 220px;
   margin-bottom: 55px;
 }
 
@@ -389,12 +390,13 @@ a {
 }
 
 .restaurant-menu__valid-command {
+  width: 187px;
   margin-top: 22px;
   margin-bottom: 60px;
   color: white;
   border: none;
+  outline: none;
   height: 50px;
-  width: 187px;
   font-size: 1rem;
   border-radius: 25px;
   background: linear-gradient(175deg, #FF79DA 0%, #9356DC 95%);
