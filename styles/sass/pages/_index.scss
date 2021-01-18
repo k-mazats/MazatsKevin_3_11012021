@@ -10,7 +10,7 @@
 		width: 100%;
 	}
 	@media (min-width: 600px) {
-        width: 50%;
+		width: 50%;
 	}
 }
 
@@ -63,24 +63,15 @@
 		font-size: 1.1rem;
 	}
 	&__validation {
-		color: white;
-		border: none;
-		height: 50px;
+		@include button;
 		width: 220px;
-		font-size: 1rem;
-		border-radius: 25px;
-		background: linear-gradient(
-			175deg,
-			$secondary-color 0%,
-			$primary-color 95%
-		);
 		margin-bottom: 55px;
-    }
-    @media (min-width: 600px) {
-        height: 50%;
-    }
-    @media (min-width: 900px) {
-        width: 33%;
+	}
+	@media (min-width: 600px) {
+		height: 50%;
+	}
+	@media (min-width: 900px) {
+		width: 33%;
 	}
 }
 
@@ -129,32 +120,32 @@
 		& .fas {
 			color: $primary-color;
 		}
-    }
-    @media (min-width: 600px) {
-        height: 50%;
-    }
-    @media (min-width: 900px) {
-        width: 33%;
+	}
+	@media (min-width: 600px) {
+		height: 50%;
+	}
+	@media (min-width: 900px) {
+		width: 33%;
 	}
 }
 
 .restaurants {
-    background-color: #f6f6f6;
-    padding-bottom: 59px;
+	background-color: #f6f6f6;
+	padding-bottom: 59px;
 	&__title {
 		@include restaurants-section-title;
 	}
-    
-    @media (min-width: 600px) {
-        height: 100%;
-        min-height: 795px;
-        border-left: 2px solid #eaeaea;
-        padding-bottom: 0;
-    }
-    @media (min-width: 900px) {
-        min-height: 824px;
-        width: 67%;
-        justify-content: space-around;
+
+	@media (min-width: 600px) {
+		height: 100%;
+		min-height: 795px;
+		border-left: 2px solid #eaeaea;
+		padding-bottom: 0;
+	}
+	@media (min-width: 900px) {
+		min-height: 824px;
+		width: 67%;
+		justify-content: space-around;
 	}
 }
 .restaurant-card {
@@ -211,8 +202,8 @@
 		border-radius: 3px;
 		background-color: $third-color;
 		color: #139273;
-    }
-    @media (min-width: 900px) {
-        width: calc(50% - 38px);
+	}
+	@media (min-width: 900px) {
+		width: calc(50% - 38px);
 	}
 }

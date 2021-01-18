@@ -13,19 +13,11 @@
 	width: 100%;
     background-color: #eaeaea;
     &__valid-command{
-        margin-top: 22px;
-        margin-bottom: 60px;
-        color: white;
-		border: none;
-		height: 50px;
 		width: 187px;
-		font-size: 1rem;
-		border-radius: 25px;
-		background: linear-gradient(
-			175deg,
-			$secondary-color 0%,
-			$primary-color 95%
-		);
+		margin-top: 22px;
+		margin-bottom: 60px;
+		
+		@include button;    
     }
 }
 
