@@ -1,0 +1,161 @@
+.search,
+.help,
+.restaurants {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+
+	&__title {
+		width: 100%;
+	}
+}
+
+.search {
+	background-color: #f6f6f6;
+
+	&__form {
+		width: 100%;
+	}
+
+	&__label {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		height: 50px;
+		width: 100%;
+
+		background-color: #eaeaea;
+
+		&--sr-only {
+			@media screen {
+				display: none;
+			}
+		}
+		& .fas {
+			margin-top: -10px;
+		}
+	}
+
+	&__input {
+		width: 42%;
+		background-color: transparent;
+		border: none;
+		outline: none;
+		margin-top: -5px;
+		font-size: 1rem;
+		font-weight: 700;
+
+		&::-webkit-search-cancel-button {
+			display: none;
+		}
+	}
+	&__title {
+		// margin-top: 35px;
+		padding: 35px 65px 0 65px;
+	}
+	&__intro {
+		padding: 12px 35px 30px 35px;
+		font-size: 1.1rem;
+	}
+	&__validation {
+		color: white;
+		border: none;
+		height: 50px;
+		width: 220px;
+		font-size: 1rem;
+		border-radius: 25px;
+		background: linear-gradient(
+			175deg,
+			$secondary-color 0%,
+			$primary-color 95%
+		);
+		margin-bottom: 55px;
+	}
+}
+
+.help {
+	&__title {
+		padding: 50px 1.75ch 25px 1.75ch;
+		text-align: left;
+	}
+	&__step-wrap {
+		display: flex;
+		align-items: center;
+
+		height: 75px;
+		width: 85%;
+
+		margin-bottom: 1.5rem;
+		margin-left: 1.5ch;
+		padding-top: 5px;
+
+		border-radius: 16px;
+		@include index-card-shadow;
+	}
+	&__step-number {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+
+		background-color: $primary-color;
+		color: white;
+
+		margin-left: -15px;
+	}
+	& .fas {
+		width: 21px;
+		font-size: 1.3rem;
+		color: #7e7e7e;
+		margin: 0 20px 0 20px;
+	}
+	&__step-wrap--last {
+		background-color: #f5edff;
+		margin-bottom: 65px;
+		& .fas {
+			color: $primary-color;
+		}
+	}
+}
+.restaurants {
+	background-color: #f6f6f6;
+	&__title {
+		@include restaurants-section-title;
+	}
+}
+.restaurant-card {
+	position: relative;
+	height: 250px;
+	width: calc(100% - 38px);
+	border-radius: 15px;
+	margin-bottom: 1rem;
+	@include index-card-shadow;
+	&__wrap {
+		height: 100%;
+		width: 100%;
+		border-radius: 15px;
+		& .restaurant-card__img {
+			object-fit: cover;
+			object-position: center;
+			width: 100%;
+			height: 67.5%;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+	}
+	&__new-tag {
+        position: absolute;
+        font-size: 0.8rem;
+		top: 13px;
+		right: 12px;
+        padding: 7px 16px;
+        border-radius: 3px;
+		background-color: $third-color;
+		color: #139273;
+	}
+}
