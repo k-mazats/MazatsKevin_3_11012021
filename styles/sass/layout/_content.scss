@@ -1,14 +1,12 @@
 .index-main,
 .restaurant-main {
 	display: flex;
-	align-items: center;
+	flex-direction: column;
 	height:100%;
 }
 .index-main{
 	@media (min-width: 600px) {
         display: flex;
-		flex-direction: column;
-		align-items: stretch;
 		flex-wrap: wrap;
 		max-height: 1227px;
 	}
