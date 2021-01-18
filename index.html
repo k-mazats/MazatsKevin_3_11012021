@@ -18,20 +18,39 @@
 			<h1 class="header__title">ohmyfood</h1>
 		</header>
 		<main class="index-main">
-			<section class="search__section">
+			<section class="search">
 				<form class="search__form">
 					<label for="searchInput" class="search__label">
 						<i class="fas fa-map-marker-alt"></i>
 						<span class="search__label--sr-only">Ville</span>
 					</label>
 					<input type="search" class="search__input" id="searchInput" />
-                    <h1 class="search__title">Réservez le menu qui vous convient</h1>
-                    <p class="search__intro">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <button class="search__validation">Explorez nos restaurants</button>
+					<h1 class="search__title">Réservez le menu qui vous convient</h1>
+					<p class="search__intro">
+						Découvrez des restaurants d'exception, sélectionnés par nos soins.
+					</p>
+					<button class="search__validation">Explorez nos restaurants</button>
 				</form>
 			</section>
-			<section class="help__section"></section>
-			<section class="restaurants__section"></section>
+			<section class="help">
+				<h1 class="help__title">Fonctionnement</h1>
+				<article class="help__step-wrap">
+                    <p class="help__step-number">1</p>
+                    <i class="fas fa-mobile-alt"></i>
+					<p class="help__step-text">Choisissez un restaurant</p>
+                </article>
+                <article class="help__step-wrap">
+                    <p class="help__step-number">2</p>
+                    <i class="fas fa-list-ul"></i>
+					<p class="help__step-text">Composez votre menu</p>
+                </article>
+                <article class="help__step-wrap--last">
+                    <p class="help__step-number">3</p>
+                    <i class="fas fa-store"></i>
+					<p class="help__step-text">Dégustez au restaurant</p>
+				</article>
+			</section>
+			<section class="restaurants"></section>
 		</main>
 	</body>
 </html>
