@@ -13,7 +13,7 @@
 		></script>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Shrikhand&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" type="text/css" href="../styles/css/main.css" />
@@ -30,18 +30,48 @@
 		<main class="restaurant-main">
 			<form class="restaurant-menu">
 				<header class="menu-header">
-					<img src="" alt="" class="menu-header__cover" />
-					<h1 class="menu-header__title"></h1>
+					<img
+						src="../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+						alt=""
+						class="menu-header__cover"
+					/>
+					<h1 class="menu-header__title">La palette du goût</h1>
 					<!-- check how to make the like button .menu-header__like-->
 				</header>
 				<section class="dish-type">
 					<h2 class="dish-type__title">ENTRÉES</h2>
-					<label class="dish-card__label">
+					<label class="dish-card">
 						<div class="dish-card__details">
-							<h2 class="dish-card__title"></h2>
-							<p class="dish-card__description"></p>
+							<h2 class="dish-card__title">Fricassée d'escargot</h2>
+							<p class="dish-card__description">Au piment d'espelette</p>
 						</div>
-						<p class="dish-card__price"></p>
+						<p class="dish-card__price">25€</p>
+						<div class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<input type="radio" name="entry" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<div class="dish-card__details">
+							<h2 class="dish-card__title">Foie gras de canard mi-cuit</h2>
+							<p class="dish-card__description">
+								Et ses copeaux de truffe noire
+							</p>
+						</div>
+						<p class="dish-card__price">35€</p>
+						<div class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<input type="radio" name="entry" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<div class="dish-card__details">
+							<h2 class="dish-card__title">Oeuf au plat</h2>
+							<p class="dish-card__description">
+								Assaisonné à la truffe sur lit de caviar
+							</p>
+						</div>
+						<p class="dish-card__price">20€</p>
 						<div class="dish-card__selected">
 							<i class="fas fa-check-circle"></i>
 						</div>
@@ -50,12 +80,36 @@
 				</section>
 				<section class="dish-type">
 					<h2 class="dish-type__title">PLAT</h2>
-					<label class="dish-card__label">
+					<label class="dish-card">
 						<div class="dish-card__details">
-							<h2 class="dish-card__title"></h2>
-							<p class="dish-card__description"></p>
+							<h2 class="dish-card__title">Filet de boeuf aux herbes</h2>
+							<p class="dish-card__description">
+								Accompagné de sa ribambelle de légumes
+							</p>
 						</div>
-						<p class="dish-card__price"></p>
+						<p class="dish-card__price">40€</p>
+						<div class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<input type="radio" name="entry" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<div class="dish-card__details">
+							<h2 class="dish-card__title">Parmentier de queue de boeuf</h2>
+							<p class="dish-card__description">À la truffe noire sur sa purée de panais</p>
+						</div>
+						<p class="dish-card__price">35€</p>
+						<div class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<input type="radio" name="entry" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<div class="dish-card__details">
+							<h2 class="dish-card__title">Filet de turbot</h2>
+							<p class="dish-card__description">Aux agrumes</p>
+						</div>
+						<p class="dish-card__price">44€</p>
 						<div class="dish-card__selected">
 							<i class="fas fa-check-circle"></i>
 						</div>
@@ -64,12 +118,34 @@
 				</section>
 				<section class="dish-type">
 					<h2 class="dish-type__title">DESSERTS</h2>
-					<label class="dish-card__label">
+					<label class="dish-card">
 						<div class="dish-card__details">
-							<h2 class="dish-card__title"></h2>
-							<p class="dish-card__description"></p>
+							<h2 class="dish-card__title">Paris-Brest</h2>
+							<p class="dish-card__description">Revisité</p>
 						</div>
-						<p class="dish-card__price"></p>
+						<p class="dish-card__price">18€</p>
+						<div class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<input type="radio" name="entry" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<div class="dish-card__details">
+							<h2 class="dish-card__title">Macaron au chocolat d'exception </h2>
+							<p class="dish-card__description">Et glace à la vanille de Madagascar</p>
+						</div>
+						<p class="dish-card__price">22€</p>
+						<div class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<input type="radio" name="entry" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<div class="dish-card__details">
+							<h2 class="dish-card__title">Mousse au chocolat </h2>
+							<p class="dish-card__description">Au piment d'Espelette et à la truffe noire</p>
+						</div>
+						<p class="dish-card__price">23€ </p>
 						<div class="dish-card__selected">
 							<i class="fas fa-check-circle"></i>
 						</div>
