@@ -126,7 +126,8 @@
 	background-color: #f6f6f6;
 	&__title {
 		@include restaurants-section-title;
-	}
+    }
+    // padding-bottom: 50px;
 }
 .restaurant-card {
 	position: relative;
