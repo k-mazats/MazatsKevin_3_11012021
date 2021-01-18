@@ -113,13 +113,12 @@ a {
 .restaurant-main {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   height: 100%;
 }
 
 @media (min-width: 600px) {
   .index-main {
-    display: flex;
-    flex-wrap: wrap;
     max-height: 1227px;
   }
 }
