@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="">
-</head>
-<body>
-    <header class="header">
-    <h1 class="header__title">ohmyfood</h1>
-    </header>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Document</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script
+			src="https://kit.fontawesome.com/a35b44c601.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" type="text/css" href="" />
+	</head>
+	<body>
+		<header class="header">
+			<h1 class="header__title">ohmyfood</h1>
+		</header>
+		<main class="index-main">
+			<section class="search__section">
+				<form class="search__form">
+					<label for="searchInput" class="search__label">
+						<i class="fas fa-map-marker-alt"></i>
+						<span class="search__label--sr-only">Ville</span>
+					</label>
+					<input type="search" class="search__input" id="searchInput" />
+                    <h1 class="search__title">Réservez le menu qui vous convient</h1>
+                    <p class="search__intro">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <button class="search__validation">Explorez nos restaurants</button>
+				</form>
+			</section>
+			<section class="help__section"></section>
+			<section class="restaurants__section"></section>
+		</main>
+	</body>
 </html>
