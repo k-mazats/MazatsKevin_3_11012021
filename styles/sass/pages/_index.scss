@@ -138,19 +138,21 @@
 	}
 }
 .restaurants {
-	background-color: #f6f6f6;
+    background-color: #f6f6f6;
+    padding-bottom: 59px;
 	&__title {
 		@include restaurants-section-title;
 	}
-    padding-bottom: 59px;
+    
     @media (min-width: 600px) {
         height: 100%;
+        min-height: 795px;
         border-left: 2px solid #eaeaea;
+        padding-bottom: 0;
     }
     @media (min-width: 900px) {
+        min-height: 824px;
         width: 67%;
-    }
-    @media (min-width: 900px) {
         justify-content: space-around;
 	}
 }
