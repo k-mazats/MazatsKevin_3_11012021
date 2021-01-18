@@ -34,7 +34,6 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
-  /* line-height: 1.5; */
   width: 100%;
 }
 
@@ -45,14 +44,11 @@ ol[class] {
 }
 
 /* Make images easier to work with */
-/* img {
+img {
   max-width: 100%;
   display: block;
-} */
-/* Natural flow and rhythm in articles by default
-article > * + * {
-  margin-top: 1em;
-} */
+}
+
 /* Inherit fonts for inputs and buttons */
 input,
 button,
@@ -67,4 +63,33 @@ select {
 
 .header__title, .footer__title {
   font-family: 'Shrikhand', cursive;
+}
+
+.header__title {
+  font-size: 1.9rem;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 2px 2px 0px rgba(110, 110, 110, 0.5);
+  margin-bottom: 2px;
+}
+
+.header__title {
+  margin-top: 5px;
+}
+
+.header__home-wrap {
+  position: absolute;
+  left: 25px;
+  margin-top: 5px;
+}
+
+.header__home-link {
+  color: inherit;
 }
