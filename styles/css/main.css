@@ -254,13 +254,42 @@ a {
   border-radius: 15px;
 }
 
-.restaurant-card__wrap .restaurant-card__img {
+.restaurant-card__img {
   object-fit: cover;
   object-position: center;
   width: 100%;
-  height: 67.5%;
+  height: 70%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.restaurant-card__body {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.restaurant-card__title, .restaurant-card__location {
+  width: 80%;
+  text-align: left;
+  padding-left: 14px;
+}
+
+.restaurant-card__title {
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+
+.restaurant-card__location {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.restaurant-card .placeholder-like {
+  width: 20%;
+  height: 100%;
 }
 
 .restaurant-card__new-tag {
