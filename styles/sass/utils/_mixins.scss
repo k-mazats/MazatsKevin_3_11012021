@@ -8,14 +8,59 @@
 }
 
 @mixin button {
+	position: relative;
+	z-index: 999;
 	color: white;
 	border: none;
 	outline: none;
 	height: 50px;
 	font-size: 1rem;
 	border-radius: 25px;
-	background: linear-gradient(175deg, $secondary-color 0%, $primary-color 95%);
-	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+	background: transparent;
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -999;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		border-radius: 25px;
+		background: linear-gradient(
+			175deg,
+			$secondary-color 0%,
+			$primary-color 95%
+		);
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+		opacity: 1;
+		transition: opacity 500ms;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: -999;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		border-radius: 25px;
+		background: linear-gradient(
+			175deg,
+			darken($secondary-color, 15) 0%,
+			darken($primary-color, 15) 95%
+		);
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+		opacity: 0;
+		transition: opacity 500ms;
+	}
+	&:hover {
+		&::before {
+			opacity: 0;
+		}
+		&::after {
+			opacity: 1;
+		}
+	}
 }
 
 @mixin like-button {
@@ -43,7 +88,8 @@
 
 		font-size: 2em;
 
-		opacity:100%;
+		opacity: 1;
+		transition: opacity 250ms transform 150ms;
 	}
 	&::after {
 		content: "\f004";
@@ -62,20 +108,44 @@
 
 		font-size: 2em;
 		font-weight: 900;
-		
-		background: linear-gradient(45deg, #FF79DA 0%, #9356DC 66%);
+
+		background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
 		background-clip: text;
 		-webkit-background-clip: text;
 		color: transparent;
 
 		opacity: 0;
+
+		transition: opacity 250ms;
 	}
-	&:checked{
+	&:checked {
 		&::before {
-			opacity: 0%;
+			opacity: 0;
 		}
 		&::after {
-			opacity: 100%;
+			opacity: 1;
+		}
+	}
+	&:hover:not(:checked) {
+		@keyframes heartbeat {
+			0% {
+				transform: scale(0.8);
+			}
+			
+			33% {
+				transform: scale(1);
+			}
+			67% {
+				transform: scale(0.8);
+			}
+			100% {
+				transform: scale(1);
+			}
+		}
+		&::before {
+			animation-name: heartbeat;
+			animation-duration: 600ms;
+			animation-iteration-count: infinite;
 		}
 	}
 }
