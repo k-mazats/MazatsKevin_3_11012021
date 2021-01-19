@@ -4,7 +4,7 @@
 }
 
 @mixin index-card-shadow {
-	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 @mixin button {
@@ -15,4 +15,67 @@
 	font-size: 1rem;
 	border-radius: 25px;
 	background: linear-gradient(175deg, $secondary-color 0%, $primary-color 95%);
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+@mixin like-button {
+	display: block;
+	position: relative;
+	visibility: hidden;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	font-family: "Font Awesome 5 Free";
+	&::before {
+		content: "\f004";
+		visibility: visible;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		position: absolute;
+		z-index: 999;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		font-size: 2em;
+
+		opacity:100%;
+	}
+	&::after {
+		content: "\f004";
+		visibility: visible;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		position: absolute;
+		z-index: 999;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		font-size: 2em;
+		font-weight: 900;
+		
+		background: linear-gradient(45deg, #FF79DA 0%, #9356DC 66%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+
+		opacity: 0;
+	}
+	&:checked{
+		&::before {
+			opacity: 0%;
+		}
+		&::after {
+			opacity: 100%;
+		}
+	}
 }

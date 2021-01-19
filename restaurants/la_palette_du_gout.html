@@ -19,7 +19,7 @@
 		<link rel="stylesheet" type="text/css" href="../styles/css/main.css" />
 	</head>
 	<body>
-		<header class="header">
+		<header class="header header--restaurants">
 			<nav class="header__home-wrap">
 				<a href="../index.html" class="header__home-link">
 					<i class="fas fa-arrow-left"></i>
@@ -35,8 +35,12 @@
 						alt=""
 						class="menu-header__cover"
 					/>
-					<h1 class="menu-header__title">La palette du goût</h1>
-					<!-- check how to make the like button .menu-header__like-->
+					<div class="menu-header__wrap">
+						<h1 class="menu-header__title">La palette du goût</h1>
+						<label class="menu-header__like-label">
+							<input type="checkbox" class="menu-header__like-button"
+						/></label>
+					</div>
 				</header>
 				<section class="dish-type">
 					<h2 class="dish-type__title">ENTRÉES</h2>
@@ -96,7 +100,9 @@
 					<label class="dish-card">
 						<div class="dish-card__details">
 							<h2 class="dish-card__title">Parmentier de queue de boeuf</h2>
-							<p class="dish-card__description">À la truffe noire sur sa purée de panais</p>
+							<p class="dish-card__description">
+								À la truffe noire sur sa purée de panais
+							</p>
 						</div>
 						<p class="dish-card__price">35€</p>
 						<div class="dish-card__selected">
@@ -131,8 +137,10 @@
 					</label>
 					<label class="dish-card">
 						<div class="dish-card__details">
-							<h2 class="dish-card__title">Macaron au chocolat d'exception </h2>
-							<p class="dish-card__description">Et glace à la vanille de Madagascar</p>
+							<h2 class="dish-card__title">Macaron au chocolat d'exception</h2>
+							<p class="dish-card__description">
+								Et glace à la vanille de Madagascar
+							</p>
 						</div>
 						<p class="dish-card__price">22€</p>
 						<div class="dish-card__selected">
@@ -142,10 +150,12 @@
 					</label>
 					<label class="dish-card">
 						<div class="dish-card__details">
-							<h2 class="dish-card__title">Mousse au chocolat </h2>
-							<p class="dish-card__description">Au piment d'Espelette et à la truffe noire</p>
+							<h2 class="dish-card__title">Mousse au chocolat</h2>
+							<p class="dish-card__description">
+								Au piment d'Espelette et à la truffe noire
+							</p>
 						</div>
-						<p class="dish-card__price">23€ </p>
+						<p class="dish-card__price">23€</p>
 						<div class="dish-card__selected">
 							<i class="fas fa-check-circle"></i>
 						</div>
