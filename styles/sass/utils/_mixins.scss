@@ -89,7 +89,7 @@
 		font-size: 2em;
 
 		opacity: 1;
-		transition: opacity 250ms transform 150ms;
+		transition: opacity 250ms;
 	}
 	&::after {
 		content: "\f004";
@@ -116,7 +116,7 @@
 
 		opacity: 0;
 
-		transition: opacity 250ms;
+		transition: opacity 350ms 100ms;
 	}
 	&:checked {
 		&::before {

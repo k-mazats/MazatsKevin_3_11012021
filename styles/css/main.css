@@ -432,7 +432,7 @@ a {
   height: 100%;
   font-size: 2em;
   opacity: 1;
-  transition: opacity 250ms transform 150ms;
+  transition: opacity 250ms;
 }
 
 .restaurant-card__like-button::after {
@@ -453,7 +453,7 @@ a {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 350ms 100ms;
 }
 
 .restaurant-card__like-button:checked::before {
@@ -637,7 +637,7 @@ a {
   height: 100%;
   font-size: 2em;
   opacity: 1;
-  transition: opacity 250ms transform 150ms;
+  transition: opacity 250ms;
 }
 
 .menu-header__like-button::after {
@@ -658,7 +658,7 @@ a {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: opacity 250ms;
+  transition: opacity 350ms 100ms;
 }
 
 .menu-header__like-button:checked::before {
