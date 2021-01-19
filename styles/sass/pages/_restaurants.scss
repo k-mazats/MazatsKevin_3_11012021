@@ -145,7 +145,7 @@
 	&__title,
 	&__description,
 	&__price {
-		animation: slide-up 600ms cubic-bezier(0.5, 1, 0.89, 1) 1 running, fade-in 750ms cubic-bezier(0.5, 0, 0.75, 0) 1 running;
+		animation: slide-up 600ms cubic-bezier(0.5, 1, 0.89, 1) 1 running, fade-in 250ms cubic-bezier(0.5, 0, 0.75, 0) 1 running;
 	}
 }
 @keyframes slide-up {
