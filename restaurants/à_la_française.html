@@ -13,7 +13,7 @@
 		></script>
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Shrikhand&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600&family=Shrikhand&display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" type="text/css" href="../styles/css/main.css" />
@@ -30,50 +30,132 @@
 		<main class="restaurant-main">
 			<form class="restaurant-menu">
 				<header class="menu-header">
-					<img src="" alt="" class="menu-header__cover" />
-					<h1 class="menu-header__title"></h1>
-					<!-- check how to make the like button .menu-header__like-->
+					<img src="../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" class="menu-header__cover" />
+					<div class="menu-header__wrap">
+						<h1 class="menu-header__title">À la française</h1>
+						<label class="menu-header__like-label">
+							<input type="checkbox" class="menu-header__like-button"
+						/></label>
+					</div>
 				</header>
 				<section class="dish-type">
 					<h2 class="dish-type__title">ENTRÉES</h2>
 					<label class="dish-card">
-						<div class="dish-card__details">
-							<h2 class="dish-card__title"></h2>
-							<p class="dish-card__description"></p>
-						</div>
-						<p class="dish-card__price"></p>
-						<div class="dish-card__selected">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Tartare de poulpe acidulé</span>
+							<span class="dish-card__description">Aux zestes d'orange</span>
+						</span>
+						<span class="dish-card__price">25€</span>
+						<span class="dish-card__selected">
 							<i class="fas fa-check-circle"></i>
-						</div>
+						</span>
+						<input type="radio" name="entry" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Velouté de légumes d'antan</span>
+							<span class="dish-card__description">
+								Carotte, panais, topinambour
+							</span>
+						</span>
+						<span class="dish-card__price">35€</span>
+						<span class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</span>
+						<input type="radio" name="entry" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Soupe à l'oignon</span>
+							<span class="dish-card__description">
+								Revisitée
+							</span>
+						</span>
+						<span class="dish-card__price">20€</span>
+						<span class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</span>
 						<input type="radio" name="entry" class="dish-type__choice" />
 					</label>
 				</section>
 				<section class="dish-type">
 					<h2 class="dish-type__title">PLAT</h2>
 					<label class="dish-card">
-						<div class="dish-card__details">
-							<h2 class="dish-card__title"></h2>
-							<p class="dish-card__description"></p>
-						</div>
-						<p class="dish-card__price"></p>
-						<div class="dish-card__selected">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Coquilles Saint-Jacques</span>
+							<span class="dish-card__description">
+								Accompagnées d'une purée de panais
+							</span>
+						</span>
+						<span class="dish-card__price">40€</span>
+						<span class="dish-card__selected">
 							<i class="fas fa-check-circle"></i>
-						</div>
-						<input type="radio" name="entry" class="dish-type__choice" />
+						</span>
+						<input type="radio" name="main" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Magret de canard</span>
+							<span class="dish-card__description">
+								Et parmentier de pommes de terre
+							</span>
+						</span>
+						<span class="dish-card__price">35€</span>
+						<span class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</span>
+						<input type="radio" name="main" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Pigeonneau d’Ille-et-Vilaine</span>
+							<span class="dish-card__description">Sur son lit de gnocchis aux légumes</span>
+						</span>
+						<span class="dish-card__price">44€</span>
+						<span class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</span>
+						<input type="radio" name="main" class="dish-type__choice" />
 					</label>
 				</section>
 				<section class="dish-type">
 					<h2 class="dish-type__title">DESSERTS</h2>
 					<label class="dish-card">
-						<div class="dish-card__details">
-							<h2 class="dish-card__title"></h2>
-							<p class="dish-card__description"></p>
-						</div>
-						<p class="dish-card__price"></p>
-						<div class="dish-card__selected">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Pétales de violettes glacés</span>
+							<span class="dish-card__description">Et purée de noisettes</span>
+						</span>
+						<span class="dish-card__price">18€</span>
+						<span class="dish-card__selected">
 							<i class="fas fa-check-circle"></i>
-						</div>
-						<input type="radio" name="entry" class="dish-type__choice" />
+						</span>
+						<input type="radio" name="dessert" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Fondant au chocolat</span>
+							<span class="dish-card__description">
+								Revisité
+							</span>
+						</span>
+						<span class="dish-card__price">22€</span>
+						<span class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</span>
+						<input type="radio" name="dessert" class="dish-type__choice" />
+					</label>
+					<label class="dish-card">
+						<span class="dish-card__details">
+							<span class="dish-card__title">Millefeuille croustillant</span>
+							<span class="dish-card__description">
+								Myrtilles et pâte d’amande
+							</span>
+						</span>
+						<span class="dish-card__price">23€</span>
+						<span class="dish-card__selected">
+							<i class="fas fa-check-circle"></i>
+						</span>
+						<input type="radio" name="dessert" class="dish-type__choice" />
 					</label>
 				</section>
 				<button class="restaurant-menu__valid-command">Commander</button>

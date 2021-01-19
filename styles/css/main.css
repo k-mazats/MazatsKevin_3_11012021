@@ -621,7 +621,9 @@ a {
 }
 
 .dish-card__title {
+  display: block;
   font-size: 1.13rem;
+  font-weight: 500;
   padding-bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
@@ -629,6 +631,7 @@ a {
 }
 
 .dish-card__description {
+  display: block;
   font-size: 0.95rem;
   padding-bottom: 13px;
   white-space: nowrap;
@@ -637,6 +640,7 @@ a {
 }
 
 .dish-card__price {
+  display: block;
   width: 46px;
   padding-bottom: 18px;
   font-size: 0.94rem;
