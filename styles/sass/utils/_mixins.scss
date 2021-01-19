@@ -116,7 +116,7 @@
 
 		opacity: 0;
 
-		transition: opacity 350ms 100ms;
+		transition: opacity 450ms 100ms;
 	}
 	&:checked {
 		&::before {
@@ -126,26 +126,28 @@
 			opacity: 1;
 		}
 	}
-	&:hover:not(:checked) {
-		@keyframes heartbeat {
-			0% {
-				transform: scale(0.8);
+	@media (hover: hover) {
+		&:hover:not(:checked) {
+			@keyframes heartbeat {
+				0% {
+					transform: scale(0.8);
+				}
+
+				33% {
+					transform: scale(1);
+				}
+				67% {
+					transform: scale(0.8);
+				}
+				100% {
+					transform: scale(1);
+				}
 			}
-			
-			33% {
-				transform: scale(1);
+			&::before {
+				animation-name: heartbeat;
+				animation-duration: 600ms;
+				animation-iteration-count: infinite;
 			}
-			67% {
-				transform: scale(0.8);
-			}
-			100% {
-				transform: scale(1);
-			}
-		}
-		&::before {
-			animation-name: heartbeat;
-			animation-duration: 600ms;
-			animation-iteration-count: infinite;
 		}
 	}
 }

@@ -453,7 +453,7 @@ a {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: opacity 350ms 100ms;
+  transition: opacity 450ms 100ms;
 }
 
 .restaurant-card__like-button:checked::before {
@@ -464,25 +464,26 @@ a {
   opacity: 1;
 }
 
-@keyframes heartbeat {
-  0% {
-    transform: scale(0.8);
+@media (hover: hover) {
+  @keyframes heartbeat {
+    0% {
+      transform: scale(0.8);
+    }
+    33% {
+      transform: scale(1);
+    }
+    67% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
-  33% {
-    transform: scale(1);
+  .restaurant-card__like-button:hover:not(:checked)::before {
+    animation-name: heartbeat;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
   }
-  67% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.restaurant-card__like-button:hover:not(:checked)::before {
-  animation-name: heartbeat;
-  animation-duration: 600ms;
-  animation-iteration-count: infinite;
 }
 
 .restaurant-card__new-tag {
@@ -658,7 +659,7 @@ a {
   -webkit-background-clip: text;
   color: transparent;
   opacity: 0;
-  transition: opacity 350ms 100ms;
+  transition: opacity 450ms 100ms;
 }
 
 .menu-header__like-button:checked::before {
@@ -669,25 +670,26 @@ a {
   opacity: 1;
 }
 
-@keyframes heartbeat {
-  0% {
-    transform: scale(0.8);
+@media (hover: hover) {
+  @keyframes heartbeat {
+    0% {
+      transform: scale(0.8);
+    }
+    33% {
+      transform: scale(1);
+    }
+    67% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
-  33% {
-    transform: scale(1);
+  .menu-header__like-button:hover:not(:checked)::before {
+    animation-name: heartbeat;
+    animation-duration: 600ms;
+    animation-iteration-count: infinite;
   }
-  67% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.menu-header__like-button:hover:not(:checked)::before {
-  animation-name: heartbeat;
-  animation-duration: 600ms;
-  animation-iteration-count: infinite;
 }
 
 .dish-type {
