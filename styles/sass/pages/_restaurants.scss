@@ -160,7 +160,7 @@ animation: push-left 450ms cubic-bezier(0, 0.55, 0.45, 1) 1 both;
 animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 both;
 	}
 	&__choice:not(:checked)~&__price{
-animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 reverse both;
+animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 reverse both, fade-in 250ms cubic-bezier(0.5, 0, 0.75, 0) 1 running;
 	}
 }
 @keyframes slide-up {
@@ -190,7 +190,7 @@ animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 reverse both;
 }
 @keyframes move-left{
 	0%{
-		
+		transform: translateX(130%);
 	}
 	100%{
 		transform: translateX(0);
