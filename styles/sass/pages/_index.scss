@@ -40,34 +40,6 @@
 			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) alternate infinite running;
 		}
 	}
-
-	@keyframes spin {
-		0% {
-			transform: rotate(0deg);
-		}
-		50% {
-			transform: rotate(180deg);
-		}
-		100% {
-			transform: rotate(360deg);
-		}
-	}
-	@keyframes loader {
-		0% {
-			opacity: 1;
-			transform: scale(1);
-		}
-		80% {
-			opacity: 1;
-		}
-		99%{
-			transform: scale(1);
-		}
-		100% {
-			opacity: 0;
-			transform: scale(0);
-		}
-	}
 }
 
 .search,
