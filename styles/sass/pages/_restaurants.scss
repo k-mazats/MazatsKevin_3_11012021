@@ -89,7 +89,6 @@
 	}
 }
 .dish-card {
-	position:relative;
 	@include index-card-shadow;
 	width: calc(100% - 25px);
 	height: 68px;
@@ -113,11 +112,13 @@
 		font-size: 1.25rem;
 		transform: scaleX(0);
 		transform-origin: right;
+		
 	}
 	&__details {
 		display: block;
 		padding-left: 12px;
-		width: calc(100% - 46px);
+		
+		width: calc(100% - 46px + 60px);
 	}
 	&__title {
 		display: block;
@@ -142,33 +143,34 @@
 		padding-bottom: 18px;
 		font-size: 0.94rem;
 		font-weight: 600;
-		// transform-origin: right;
-		transition-property: transform;
-		transform: translateX(0);
-		position: absolute;
-		left: calc(100% - 46px);
-		z-index: 999;
+		transform-origin: right;
 	}
 	&__choice {
 		display: none;
 	}
 	&__title,
 	&__description,
-	&__price{
+	&__price {
 		animation: slide-up 600ms cubic-bezier(0.5, 1, 0.89, 1) 1 running,
 			fade-in 250ms cubic-bezier(0.5, 0, 0.75, 0) 1 running;
 	}
 	&__choice:checked ~ &__selected {
 		animation: push-left 450ms cubic-bezier(0, 0.55, 0.45, 1) 1 both;
-		.fas {
+		
+			.fas{
 			animation: spin 400ms linear 1 running;
 		}
+		
 	}
 	&__choice:checked ~ &__price {
+<<<<<<< HEAD
 		transform: translateX(-130%);
+=======
+		animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 both;
+>>>>>>> parent of 122305b... fixed price behavior
 	}
 	&__choice:not(:checked) ~ &__price {
-		transform: translateX(0);
+		animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 reverse both;
 	}
 }
 
