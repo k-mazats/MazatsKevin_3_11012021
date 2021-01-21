@@ -1,4 +1,3 @@
-@import url("font-awesome/css/fontawesome-all.min.css");
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -514,75 +513,48 @@ a {
   font-size: 1rem;
 }
 
-.restaurant-card__like-label {
-  width: 20%;
-  height: 30%;
+.restaurant-card__like-button {
   position: absolute;
   top: 70%;
   left: 80%;
-}
-
-.restaurant-card__like-button {
-  display: block;
-  position: relative;
-  visibility: hidden;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  font-family: "Font Awesome 5 Free";
-}
-
-.restaurant-card__like-button::before {
-  content: "\f004";
-  visibility: visible;
+  width: 20%;
+  height: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  width: 100%;
-  height: 100%;
   font-size: 2em;
+}
+
+.restaurant-card__like-button .fa-heart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurant-card__like-button .fa-heart::before {
   opacity: 1;
-  transition: opacity 250ms;
+  transition: opacity 400ms;
 }
 
-.restaurant-card__like-button::after {
+.restaurant-card__like-button .fa-heart::after {
+  font-family: "Font Awesome 5 Free";
   content: "\f004";
-  visibility: visible;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 2em;
-  font-weight: 900;
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-weight: 900;
+  position: absolute;
   opacity: 0;
-  transition: opacity 450ms 100ms;
+  transition: opacity 500ms 150ms;
 }
 
-.restaurant-card__like-button:checked::before {
+.restaurant-card__like-button .fa-heart:hover::before {
   opacity: 0;
 }
 
-.restaurant-card__like-button:checked::after {
+.restaurant-card__like-button .fa-heart:hover::after {
   opacity: 1;
-}
-
-@media (hover: hover) {
-  .restaurant-card__like-button:hover:not(:checked)::before {
-    animation-name: heartbeat;
-    animation-duration: 600ms;
-    animation-iteration-count: infinite;
-  }
 }
 
 .restaurant-card__new-tag {
@@ -706,75 +678,45 @@ a {
   width: calc(100% - 80px);
 }
 
-.menu-header__like-label {
+.menu-header__like-button {
   width: 80px;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2em;
 }
 
-.menu-header__like-button {
-  display: block;
-  position: relative;
-  visibility: hidden;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  font-family: "Font Awesome 5 Free";
-}
-
-.menu-header__like-button::before {
-  content: "\f004";
-  visibility: visible;
+.menu-header__like-button .fa-heart {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 2em;
+}
+
+.menu-header__like-button .fa-heart::before {
   opacity: 1;
-  transition: opacity 250ms;
+  transition: opacity 400ms;
 }
 
-.menu-header__like-button::after {
+.menu-header__like-button .fa-heart::after {
+  font-family: "Font Awesome 5 Free";
   content: "\f004";
-  visibility: visible;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 999;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  font-size: 2em;
-  font-weight: 900;
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-weight: 900;
+  position: absolute;
   opacity: 0;
-  transition: opacity 450ms 100ms;
+  transition: opacity 500ms 150ms;
 }
 
-.menu-header__like-button:checked::before {
+.menu-header__like-button .fa-heart:hover::before {
   opacity: 0;
 }
 
-.menu-header__like-button:checked::after {
+.menu-header__like-button .fa-heart:hover::after {
   opacity: 1;
-}
-
-@media (hover: hover) {
-  .menu-header__like-button:hover:not(:checked)::before {
-    animation-name: heartbeat;
-    animation-duration: 600ms;
-    animation-iteration-count: infinite;
-  }
 }
 
 .dish-type {
@@ -835,7 +777,7 @@ a {
 .dish-card__details {
   display: block;
   padding-left: 12px;
-  width: calc(100% - 46px + 60px);
+  width: calc(100% - 46px);
 }
 
 .dish-card__title {

@@ -64,73 +64,38 @@
 }
 
 @mixin like-button {
-	display: block;
-	position: relative;
-	visibility: hidden;
-	margin: 0;
-	width: 100%;
-	height: 100%;
-	font-family: "Font Awesome 5 Free";
-	&::before {
-		content: "\f004";
-		visibility: visible;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
 
+	& .fa-heart {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
-		position: absolute;
-		z-index: 999;
-		left: 0;
-
-		width: 100%;
-		height: 100%;
-
-		font-size: 2em;
-
-		opacity: 1;
-		transition: opacity 250ms;
-	}
-	&::after {
-		content: "\f004";
-		visibility: visible;
-
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		position: absolute;
-		z-index: 999;
-		left: 0;
-
-		width: 100%;
-		height: 100%;
-
-		font-size: 2em;
-		font-weight: 900;
-
-		background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
-		background-clip: text;
-		-webkit-background-clip: text;
-		color: transparent;
-
-		opacity: 0;
-
-		transition: opacity 450ms 100ms;
-	}
-	&:checked {
 		&::before {
-			opacity: 0;
+			opacity: 1;
+			transition: opacity 400ms;
 		}
 		&::after {
-			opacity: 1;
+			font-family: "Font Awesome 5 Free";
+			content: "\f004";
+			background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			font-weight: 900;
+			position: absolute;
+			opacity: 0;
+			transition: opacity 500ms 150ms;
 		}
-	}
-	@media (hover: hover) {
-		&:hover:not(:checked)::before {
-			animation-name: heartbeat;
-			animation-duration: 600ms;
-			animation-iteration-count: infinite;
-		}
+		&:hover {
+				&::before {
+					opacity: 0;
+				}
+				&::after {
+					opacity: 1;
+				}
+			}
 	}
 }
