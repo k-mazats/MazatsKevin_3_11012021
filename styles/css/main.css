@@ -777,7 +777,7 @@ a {
 .dish-card__details {
   display: block;
   padding-left: 12px;
-  width: calc(100% - 46px);
+  width: calc(100% - 4ch - 65px);
 }
 
 .dish-card__title {
@@ -801,11 +801,14 @@ a {
 
 .dish-card__price {
   display: block;
-  width: 46px;
+  width: 3ch;
   padding-bottom: 18px;
   font-size: 0.94rem;
   font-weight: 600;
-  transform-origin: right;
+  transform: translateX(0);
+  transition: transform 450ms;
+  position: relative;
+  right: -4ch;
 }
 
 .dish-card__choice {
@@ -825,9 +828,5 @@ a {
 }
 
 .dish-card__choice:checked ~ .dish-card__price {
-  animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 both;
-}
-
-.dish-card__choice:not(:checked) ~ .dish-card__price {
-  animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 reverse both;
+  transform: translateX(-160%);
 }
