@@ -24,7 +24,7 @@
 			border-right: $primary-color;
 			border-style: dashed;
 			border-radius: 50%;
-			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) infinite running;
+			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) infinite;
 		}
 		&::after {
 			content: "";
@@ -35,8 +35,7 @@
 			border-left: $secondary-color;
 			border-style: dashed;
 			border-radius: 50%;
-			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) alternate infinite
-				running;
+			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) alternate infinite;
 		}
 	}
 }
