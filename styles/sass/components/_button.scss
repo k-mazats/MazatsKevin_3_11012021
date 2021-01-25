@@ -19,8 +19,8 @@ button{
 		border-radius: 25px;
 		background: linear-gradient(
 			175deg,
-			$secondary-color 0%,
-			$primary-color 95%
+			$secondary-brand 0%,
+			$primary-brand 95%
 		);
 		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
 		opacity: 1;
@@ -37,8 +37,8 @@ button{
 		border-radius: 25px;
 		background: linear-gradient(
 			175deg,
-			lighten($secondary-color, 5) 0%,
-			lighten($primary-color, 5) 95%
+			lighten($secondary-brand, 5) 0%,
+			lighten($primary-brand, 5) 95%
 		);
 		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
 		opacity: 0;

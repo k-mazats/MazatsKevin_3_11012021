@@ -4,7 +4,7 @@
 		width: 100%;
 		position: fixed;
 		top: 0;
-		background-color: #eaeaea;
+		background-color: $primary-background;
 		z-index: 9999;
 		animation: loader 3.5s linear 1 both;
 	}
@@ -16,25 +16,13 @@
 		width: 100%;
 		
 		&::before {
-			content: "";
-			position: absolute;
-			width: 150px;
-			height: 150px;
-			border: 10px transparent;
-			border-right: $primary-color;
-			border-style: dashed;
-			border-radius: 50%;
+			@include loader-pseudo;
+			border-right: $primary-brand dashed;
 			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) infinite;
 		}
 		&::after {
-			content: "";
-			position: absolute;
-			width: 150px;
-			height: 150px;
-			border: 10px transparent;
-			border-left: $secondary-color;
-			border-style: dashed;
-			border-radius: 50%;
+			@include loader-pseudo;
+			border-left: $secondary-brand dashed;
 			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) alternate infinite;
 		}
 	}
@@ -57,7 +45,7 @@
 }
 
 .search {
-	background-color: #f6f6f6;
+	background-color: $secondary-background;
 
 	&__form {
 		width: 100%;
@@ -69,7 +57,7 @@
 		height: 50px;
 		width: 100%;
 
-		background-color: #eaeaea;
+		background-color: $primary-background;
 
 		&--sr-only {
 			@media screen {
@@ -116,8 +104,7 @@
 
 .help {
 	&__title {
-		padding: 50px 1.75ch 25px 1.75ch;
-		text-align: left;
+		@include section-title;
 	}
 	&__step-wrap {
 		display: flex;
@@ -125,9 +112,7 @@
 
 		height: 75px;
 		width: 85%;
-
-		margin-bottom: 1.5rem;
-		margin-left: 1.5ch;
+		margin: 0 0 1.5rem 1.5ch;
 		padding-top: 5px;
 
 		border-radius: 16px;
@@ -140,7 +125,7 @@
 		height: 25px;
 		border-radius: 50%;
 
-		background-color: $primary-color;
+		background-color: $primary-brand;
 		color: white;
 
 		margin-left: -15px;
@@ -155,7 +140,7 @@
 		background-color: #f5edff;
 		margin-bottom: 65px;
 		& .fas {
-			color: $primary-color;
+			color: $primary-brand;
 		}
 	}
 	&__step-text {
@@ -170,16 +155,16 @@
 }
 
 .restaurants {
-	background-color: #f6f6f6;
+	background-color: $secondary-background;
 	padding-bottom: 59px;
 	&__title {
-		@include restaurants-section-title;
+		@include section-title;
 	}
 
 	@media (min-width: 600px) {
 		height: 100%;
 		min-height: 795px;
-		border-left: 2px solid #eaeaea;
+		border-left: 2px solid $primary-background;
 		padding-bottom: 0;
 	}
 	@media (min-width: 900px) {
@@ -244,7 +229,7 @@
 		right: 12px;
 		padding: 7px 16px;
 		border-radius: 3px;
-		background-color: $third-color;
+		background-color: $third-brand;
 		color: #139273;
 	}
 	@media (min-width: 900px) {

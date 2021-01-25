@@ -7,7 +7,7 @@
 	height: 100%;
 	width: 100%;
 }
-@mixin restaurants-section-title {
+@mixin section-title {
 	padding: 50px 1.75ch 25px 1.75ch;
 	text-align: left;
 }
@@ -47,4 +47,13 @@
 			}
 		}
 	}
+}
+
+@mixin loader-pseudo {
+	content: "";
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	border: 10px transparent dashed;
+	border-radius: 50%;
 }
