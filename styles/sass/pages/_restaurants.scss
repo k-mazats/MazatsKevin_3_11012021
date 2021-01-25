@@ -9,15 +9,12 @@
 	}
 }
 .restaurant-menu {
-	height: 100%;
-	width: 100%;
+	@include full-size;
 	background-color: #eaeaea;
 	&__valid-command {
 		width: 187px;
 		margin-top: 22px;
 		margin-bottom: 60px;
-
-		@include button;
 	}
 }
 
@@ -53,17 +50,11 @@
 		text-align: left;
 		width: calc(100% - 80px);
 	}
-	// &__like-label {
-		
-	// 	display: flex;
-	// 	justify-content: center;
-	// 	align-items: center;
-	
 	&__like-button {
 		width: 80px;
 		height: 100%;
-	@include like-button;
-	 }
+		@include like-button;
+	}
 }
 .dish-type {
 	display: flex;
@@ -90,7 +81,7 @@
 	}
 }
 .dish-card {
-	@include index-card-shadow;
+	@include card-shadow;
 	width: calc(100% - 25px);
 	height: 68px;
 	display: flex;
@@ -101,23 +92,29 @@
 	background-color: white;
 	animation: fade-in 600ms cubic-bezier(0.5, 0, 0.75, 0) 1 running;
 	&__selected {
+		@include flex-center;
+
 		height: 100%;
 		width: 60px;
 		background-color: $third-color;
 		color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		
 		border-top-right-radius: 15px;
 		border-bottom-right-radius: 15px;
 		font-size: 1.25rem;
 		transform: scaleX(0);
 		transform-origin: right;
+		transition: transform 450ms;
+		& .fas{
+			transform: rotate(0);
+			transition: transform 450ms 200ms;
+		}
 	}
 	&__details {
 		display: block;
 		padding-left: 12px;
-		width: calc(100% - 4ch - 65px);
+		width: calc(100% - 4ch - 5px);
+		transition: width 250ms;
 	}
 	&__title {
 		display: block;
@@ -143,7 +140,7 @@
 		font-size: 0.94rem;
 		font-weight: 600;
 		transform: translateX(0);
-		transition: transform 450ms;
+		transition: transform 250ms;
 		position: relative;
 		right: -4ch;
 	}
@@ -157,16 +154,21 @@
 			fade-in 250ms cubic-bezier(0.5, 0, 0.75, 0) 1 running;
 	}
 	&__choice:checked ~ &__selected {
-		animation: push-left 450ms cubic-bezier(0, 0.55, 0.45, 1) 1 both;
-
-		.fas {
-			animation: spin 400ms linear 1 running;
+		transform: scaleX(1);
+		& .fas {
+			transform: rotate(360deg);
+		}
+	}
+	&__choice:not(:checked) ~ &__selected {
+		transform: scaleX(0);
+		& .fas {
+			transform: rotate(0);
 		}
 	}
 	&__choice:checked ~ &__price {
 		transform: translateX(-160%);
 	}
-	// &__choice:not(:checked) ~ &__price {
-	// 	animation: move-left 600ms cubic-bezier(0, 0.55, 0.45, 1) 1 reverse both;
-	// }
+	&__choice:checked ~ &__details {
+		width: calc(100% - 4ch - 65px);
+	}
 }

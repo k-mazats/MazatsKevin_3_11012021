@@ -9,12 +9,12 @@
 		animation: loader 3.5s linear 1 both;
 	}
 	&__spinner {
+		
+		@include flex-center;
+		
 		height: 100vh;
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		// animation: loader-spin 1s cubic-bezier(0.83, 0, 0.17, 1) infinite running;
+		
 		&::before {
 			content: "";
 			position: absolute;
@@ -35,7 +35,6 @@
 			border-left: $secondary-color;
 			border-style: dashed;
 			border-radius: 50%;
-			// rotate: 90deg;
 			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) alternate infinite
 				running;
 		}
@@ -66,9 +65,7 @@
 	}
 
 	&__label {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@include flex-center;
 
 		height: 50px;
 		width: 100%;
@@ -99,7 +96,7 @@
 		}
 	}
 	&__title {
-		// margin-top: 35px;
+		
 		padding: 35px 65px 0 65px;
 	}
 	&__intro {
@@ -107,7 +104,6 @@
 		font-size: 1.1rem;
 	}
 	&__validation {
-		@include button;
 		width: 220px;
 		margin-bottom: 55px;
 	}
@@ -136,12 +132,10 @@
 		padding-top: 5px;
 
 		border-radius: 16px;
-		@include index-card-shadow;
+		@include card-shadow;
 	}
 	&__step-number {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include flex-center;
 
 		width: 25px;
 		height: 25px;
@@ -201,10 +195,9 @@
 	width: calc(100% - 38px);
 	border-radius: 15px;
 	margin-bottom: 1rem;
-	@include index-card-shadow;
+	@include card-shadow;
 	&__wrap {
-		height: 100%;
-		width: 100%;
+		@include full-size;
 		border-radius: 15px;
 	}
 	&__img {
