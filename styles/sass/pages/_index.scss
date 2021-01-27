@@ -78,9 +78,9 @@
 		font-size: 1rem;
 		font-weight: 700;
 
-		&::-webkit-search-cancel-button {
-			display: none;
-		}
+		// &::-webkit-search-cancel-button {
+		// 	display: none;
+		// } Invalid for w3c validator
 	}
 	&__title {
 		

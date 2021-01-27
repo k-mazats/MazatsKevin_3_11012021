@@ -322,10 +322,6 @@ button:hover::after {
   font-weight: 700;
 }
 
-.search__input::-webkit-search-cancel-button {
-  display: none;
-}
-
 .search__title {
   padding: 35px 65px 0 65px;
 }
@@ -516,7 +512,7 @@ button:hover::after {
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
   position: absolute;
   opacity: 0;
@@ -632,7 +628,7 @@ button:hover::after {
   background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
   position: absolute;
   opacity: 0;
