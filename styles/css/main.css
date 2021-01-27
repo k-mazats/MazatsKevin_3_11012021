@@ -502,29 +502,31 @@ button:hover::after {
 }
 
 .restaurant-card__like-button .fa-heart::before {
+  position: absolute;
+  right: 20px;
   opacity: 1;
   transition: opacity 400ms;
-}
-
-.restaurant-card__like-button .fa-heart::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f004";
-  background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 500ms 150ms;
 }
 
 .restaurant-card__like-button .fa-heart:hover::before {
   opacity: 0;
 }
 
-.restaurant-card__like-button .fa-heart:hover::after {
+.restaurant-card__like-button .fa-heart:hover .restaurant-card__liked path {
   opacity: 1;
+}
+
+.restaurant-card__like-button .fa-heart .restaurant-card__liked {
+  position: absolute;
+  right: 20px;
+  z-index: 999;
+  width: 32px;
+  height: 32px;
+}
+
+.restaurant-card__like-button .fa-heart .restaurant-card__liked path {
+  opacity: 0;
+  transition: opacity 500ms 150ms;
 }
 
 .restaurant-card__new-tag {
@@ -618,29 +620,31 @@ button:hover::after {
 }
 
 .menu-header__like-button .fa-heart::before {
+  position: absolute;
+  right: 20px;
   opacity: 1;
   transition: opacity 400ms;
-}
-
-.menu-header__like-button .fa-heart::after {
-  font-family: "Font Awesome 5 Free";
-  content: "\f004";
-  background: linear-gradient(45deg, #ff79da 0%, #9356dc 66%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 900;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 500ms 150ms;
 }
 
 .menu-header__like-button .fa-heart:hover::before {
   opacity: 0;
 }
 
-.menu-header__like-button .fa-heart:hover::after {
+.menu-header__like-button .fa-heart:hover .restaurant-card__liked path {
   opacity: 1;
+}
+
+.menu-header__like-button .fa-heart .restaurant-card__liked {
+  position: absolute;
+  right: 20px;
+  z-index: 999;
+  width: 32px;
+  height: 32px;
+}
+
+.menu-header__like-button .fa-heart .restaurant-card__liked path {
+  opacity: 0;
+  transition: opacity 500ms 150ms;
 }
 
 .dish-type {
