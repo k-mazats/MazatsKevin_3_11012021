@@ -17,12 +17,13 @@
 		
 		&::before {
 			@include loader-pseudo;
-			border-right: $primary-brand dashed;
+			border-right: $primary-brand solid 6px;
+			border-top: $secondary-brand solid 6px;
 			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) infinite;
 		}
 		&::after {
 			@include loader-pseudo;
-			border-left: $secondary-brand dashed;
+			border-left: $secondary-brand solid 6px;
 			animation: spin 1s cubic-bezier(0.83, 0, 0.17, 1) alternate infinite;
 		}
 	}
