@@ -94,6 +94,7 @@
 	border-radius: 15px;
 	background-color: white;
 	animation: fade-in 600ms cubic-bezier(0.5, 0, 0.75, 0) 1;
+	overflow: hidden;
 	&__selected {
 		@include flex-center;
 
@@ -101,24 +102,19 @@
 		width: 60px;
 		background-color: $third-brand;
 		color: white;
-		
-		border-top-right-radius: 15px;
-		border-bottom-right-radius: 15px;
 		font-size: 1.25rem;
-		transform: scaleX(0);
-		transform-origin: right;
-		transition: transform 450ms;
+
 		& .fas{
 			transform: rotate(0);
-			transition: transform 450ms 200ms;
+			transition: transform 450ms;
 		}
 	}
 	&__details {
 		display: block;
 		padding-left: 12px;
-		min-width: calc(100% - 72px);
-		width: calc(100% - 72px);
-		transition: all 250ms;
+		min-width: calc(100% - 35px);
+		width: calc(100% - 35px);
+		transition: all 550ms;
 	}
 	&__title {
 		display: block;
@@ -146,7 +142,8 @@
 		transform: translateX(0);
 		transition: transform 250ms;
 		position: relative;
-		right: -36px;
+		margin-right: 10px;
+		
 	}
 	&__choice {
 		display: none;
@@ -157,21 +154,9 @@
 		animation: slide-up 600ms cubic-bezier(0.5, 1, 0.89, 1) 1,
 			fade-in 250ms cubic-bezier(0.5, 0, 0.75, 0) 1;
 	}
-	&__choice:checked ~ &__selected {
-		transform: scaleX(1);
-		& .fas {
+	&__choice:checked ~ &__selected .fas {
 			transform: rotate(360deg);
 		}
-	}
-	&__choice:not(:checked) ~ &__selected {
-		transform: scaleX(0);
-		& .fas {
-			transform: rotate(0);
-		}
-	}
-	&__choice:checked ~ &__price {
-		transform: translateX(-160%);
-	}
 	&__choice:checked ~ &__details {
 		min-width: calc(100% - 132px);
 		width: calc(100% - 132px);
