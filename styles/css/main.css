@@ -222,6 +222,10 @@ button:hover::after {
   }
 }
 
+.svg-gradient-def {
+  height: 0;
+}
+
 .animated-loader__wrap {
   height: 100vh;
   width: 100%;
