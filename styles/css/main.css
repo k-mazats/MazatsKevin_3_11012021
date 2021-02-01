@@ -552,6 +552,7 @@ button:hover::after {
 .restaurant-menu {
   height: 100%;
   width: 100%;
+  background-color: #f6f6f6;
 }
 
 .restaurant-menu__valid-command {
@@ -574,6 +575,7 @@ button:hover::after {
   width: 100%;
   height: 83px;
   min-height: min-content;
+  background-color: #f6f6f6;
   border-top-left-radius: 38px;
   border-top-right-radius: 38px;
   padding-left: 22px;
