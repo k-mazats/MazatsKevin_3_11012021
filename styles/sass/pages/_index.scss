@@ -1,5 +1,17 @@
-.svg-gradient-def{
+.svg-gradient-def {
 	height: 0;
+	&__first-stop {
+		stop-color: rgb(255, 121, 218);
+		stop-opacity: 1;
+	}
+	&__second-stop {
+		stop-color: rgb(146, 86, 220);
+		stop-opacity: 1;
+	}
+	&__third-stop {
+		stop-color: rgb(147, 87, 221);
+		stop-opacity: 1;
+	}
 }
 
 .animated-loader {
@@ -13,12 +25,11 @@
 		animation: loader 3.5s linear 1 both;
 	}
 	&__spinner {
-		
 		@include flex-center;
-		
+
 		height: 100vh;
 		width: 100%;
-		
+
 		&::before {
 			@include loader-pseudo;
 			border-right: $primary-brand dashed;
@@ -87,7 +98,6 @@
 		// } Invalid for w3c validator
 	}
 	&__title {
-		
 		padding: 35px 65px 0 65px;
 	}
 	&__intro {
