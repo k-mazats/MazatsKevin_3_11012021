@@ -10,8 +10,11 @@
     <h1>router test:</h1>
     <span id="url"></span>
     <script>
-        let url = window.location.href;
-        document.getElementById(url).innerText = url;
+        document.addEventListener("DOMContentLoaded", function() {
+  let currentURL = window.location.href;
+        document.getElementById(url).innerText = currentURL;
+});
+        
     </script>
 </body>
 </html>
