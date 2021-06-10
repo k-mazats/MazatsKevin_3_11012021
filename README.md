@@ -1,6 +1,6 @@
 # MazatsKevin_3_11012021
 
-MazatsKevin_3_11012021 is my take on the seventh project from OpenClassroom Frontend Dev training. It focuses on BEM, SASS and CSS animations, and the end goal is to create an ubereats kinda website.
+MazatsKevin_3_11012021 is my take on the third project from OpenClassroom Frontend Dev training. It focuses on BEM, SASS and CSS animations, and the end goal is to create an ubereats kinda website.
 
 ## Usage
 
